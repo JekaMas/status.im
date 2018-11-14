@@ -2,7 +2,7 @@
 <html lang="en">
 <head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>Getting Started with Whisper and EmbarkJS | Status</title>
+  <title>Getting Started with Whisper | Status</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -207,7 +207,7 @@
     
     <div class="page-intro wrapper">
   <header class="article-header">
-    <h1 class="article-title" itemprop="name">Getting Started with Whisper and EmbarkJS</h1>
+    <h1 class="article-title" itemprop="name">Getting Started with Whisper</h1>
     <a href="https://github.com/status-im/docs.status.im/edit/develop/source/research/tutorial_basic_cli.md" class="article-edit-link" title="Improve this doc">Edit on Github</a>
   </header>
 </div>
@@ -227,20 +227,13 @@
                 <h2 id="Intro" class="article-heading"><a href="#Intro" class="headerlink" title="Intro"></a>Intro<a class="article-anchor" href="#Intro" aria-hidden="true"></a></h2><p>In this tutorial we’ll learn how to use Ethereum’s Whisper protocol to create a simple chat CLI. While everything happens in your console for this tutorial, you should be able to re-use the JS we provide in your own apps and get a good sense of how to send and display different kinds of messages, as well as the beginnings of what it is possible to build with Whisper. </p>
 <p>We understand that not many DApp developers want to use Whisper in the way Status does (as a massive, multi-user messaging protocol), but rather to move specific (and often important) information about interactions in/with their DApp or plug into Status chats at specific moments. This tutorial is intended to provide you with the skills needed to adapt Whisper to your needs: you should know both enough to plug into any Status chat easily, as well as how to use Whisper for your own work by the end. Many other teams are already doing this, and you can - for instance - find more information about how to extend the basic concepts here into an interesting system on the <a href="https://blog.hellobloom.io/introducing-bloom-payment-channels-enabled-by-ethereum-whisper-1fec8ba10a03" target="_blank" rel="noopener">Bloom blog</a>.</p>
 <p>We have created <a href="https://github.com/status-im/whisper-tutorial" target="_blank" rel="noopener">a repository</a> specially for this tutorial. Please feel free to add additional tutorials if you would like to help the community out.</p>
-<p>Before we clone that repository though, let’s make sure all our dependencies are properly set up, especially NodeJS and Go-Ethereum. We’ll be using the latest versions of Geth, Whisper and EmbarkJS to get you up to speed on what Whisper looks like today.</p>
+<p>Before we clone that repository though, let’s make sure all our dependencies are properly set up, especially NodeJS and Go-Ethereum. We’ll be using the latest version of Geth to get you up to speed on what Whisper looks like today.</p>
 <h4 id="NodeJS-8-10" class="article-heading"><a href="#NodeJS-8-10" class="headerlink" title="NodeJS 8.10+"></a>NodeJS 8.10+<a class="article-anchor" href="#NodeJS-8-10" aria-hidden="true"></a></h4><pre><code>node version
 &gt; 8.10+
 </code></pre><p>If you need to update Node, please <a href="https://github.com/creationix/nvm#installation" target="_blank" rel="noopener">install <code>nvm</code></a> and install/use the LTS version. The macOS/Linux commands are provided for you below:</p>
 <pre><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 nvm install --lts
 nvm use lts
-</code></pre><h4 id="IPFS-0-4-17" class="article-heading"><a href="#IPFS-0-4-17" class="headerlink" title="IPFS 0.4.17+"></a>IPFS 0.4.17+<a class="article-anchor" href="#IPFS-0-4-17" aria-hidden="true"></a></h4><pre><code>ipfs version
-&gt; 0.4.17+
-</code></pre><p>Download the appropriate package <a href="https://docs.ipfs.io/introduction/install/" target="_blank" rel="noopener">from here</a>. Then you can follow the macOS/Linux instructions provided for you below (you can use the exact same steps if you just want to update <code>ipfs</code>):</p>
-<pre><code>tar xvfz go-ipfs.tar.gz
-cd go-ipfs
-./install.sh
-ipfs init
 </code></pre><h4 id="Go-ethereum-1-8-17" class="article-heading"><a href="#Go-ethereum-1-8-17" class="headerlink" title="Go-ethereum 1.8.17+"></a>Go-ethereum 1.8.17+<a class="article-anchor" href="#Go-ethereum-1-8-17" aria-hidden="true"></a></h4><pre><code>geth version
 &gt; 1.8.17+
 </code></pre><p>If you need to <a href="https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum" target="_blank" rel="noopener">install <code>geth</code></a>, you can use the below for macOS:</p>
@@ -348,7 +341,7 @@ web3.shh.subscribe(&quot;messages&quot;, {
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2018-11-14T11:04:35.609Z" itemprop="dateModified">Last updated: 2018-11-14</time>
+                <time class="article-footer-updated" datetime="2018-11-14T14:26:07.540Z" itemprop="dateModified">Last updated: 2018-11-14</time>
                 <a href="https://nimbus.status.im/" class="article-footer-prev" title="Nimbus (Ethereum 2.0 Client)"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
             </div>
